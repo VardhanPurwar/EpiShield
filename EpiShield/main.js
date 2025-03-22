@@ -27,3 +27,59 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => smoothScrollTo(serviceSection, -50), 200);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav_links a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const offset = 0; // Adjust this value to match your header height
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY + offset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const doctorCards = document.querySelectorAll(".doctor_card");
+    const leftArrow = document.getElementById("leftArrow");
+    const rightArrow = document.getElementById("rightArrow");
+
+    let startIndex = 0;
+    const maxVisible = 3; // Number of visible cards at a time
+
+    function updateCards() {
+        doctorCards.forEach((card, index) => {
+            card.classList.toggle("hidden", index < startIndex || index >= startIndex + maxVisible);
+        });
+
+        leftArrow.classList.toggle("hidden", startIndex === 0);
+        rightArrow.classList.toggle("hidden", startIndex + maxVisible >= doctorCards.length);
+    }
+
+    rightArrow.addEventListener("click", function () {
+        if (startIndex + maxVisible < doctorCards.length) {
+            startIndex++;
+            updateCards();
+        }
+    });
+
+    leftArrow.addEventListener("click", function () {
+        if (startIndex > 0) {
+            startIndex--;
+            updateCards();
+        }
+    });
+
+    updateCards(); // Initialize card visibility
+});
