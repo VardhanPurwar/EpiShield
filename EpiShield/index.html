@@ -13,11 +13,24 @@
         <nav class = "section_container nav_container">
             <div class ="nav_logo">Epi<span>Shield</span></div>
             <ul class = "nav_links">
-                <!-- <li class = "link"><a href="#home">Home</a></li>-->
                 <li class = "link"><a href="#service">Services</a></li>
                 <li class = "link"><a href="#experts">Experts</a></li>
                 <li class = "link"><a href="#about">About Us</a></li>
                 <button class="btn-24"><span>Sign Up</span></button>
+
+                <div class="popup" id="signupPopup">
+                    <div class="popup-content">
+                        <span class="close-btn">&times;</span>
+                        <h2>Sign Up</h2>
+                        <form>
+                            <input type="text" placeholder="Enter your name" required>
+                            <input type="email" placeholder="Enter your email" required>
+                            <input type="password" placeholder="Create a password" required>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+
             </ul>
         </nav>
         <div class="section_container header_container" id="home">
@@ -90,7 +103,7 @@
                 <span><i class="fa-solid fa-capsules"></i></span>
                 <h3>Medicines</h3>
                 <p>We provide a reliable supply of quality medicines to support your health and recovery.</p>
-                <a href="#">Learn More</a>
+                <a href="medicin.html">Learn More</a>
             </div>
         
             <div class="service_card hidden">
@@ -136,7 +149,6 @@
 
             <div class="leftarrow">
                 <button id="leftArrow" class="arrow hidden">
-                    <!-- <i class="fas fa-chevron-left"></i> -->
                     <i class="fa-solid fa-circle-arrow-left"></i>
                 </button>
             </div>
@@ -225,9 +237,11 @@
                 <p>Experience: 29+ Years</p>
             </div>
 
-            <div class="rightarrow"><button id="rightArrow" class="arrow">
-                <i class="fa-solid fa-circle-arrow-right"></i>
-            </button></div>
+            <div class="rightarrow">
+                <button id="rightArrow" class="arrow">
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </section>
 
