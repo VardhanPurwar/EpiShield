@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const viewMoreBtn = document.getElementById("viewMoreBtn");
     const seeLessBtn = document.getElementById("seeLessBtn");
     const hiddenCards = document.querySelectorAll(".service_card.hidden");
-    const serviceSection = document.querySelector(".service_container"); // Section to scroll back to
+    const serviceSection = document.querySelector(".service_container");
 
     function smoothScrollTo(element, offset = 0) {
         const targetPosition = element.getBoundingClientRect().top + window.scrollY + offset;
@@ -10,20 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     viewMoreBtn.addEventListener("click", function () {
-        hiddenCards.forEach(card => card.classList.remove("hidden")); // Show hidden cards
-        viewMoreBtn.classList.add("hidden"); // Hide "View More" button
-        seeLessBtn.classList.remove("hidden"); // Show "See Less" button
+        hiddenCards.forEach(card => card.classList.remove("hidden"));
+        viewMoreBtn.classList.add("hidden");
+        seeLessBtn.classList.remove("hidden");
 
-        // Smooth scroll to the first revealed card with slight offset for better alignment
         setTimeout(() => smoothScrollTo(hiddenCards[0], -50), 200);
     });
 
     seeLessBtn.addEventListener("click", function () {
-        hiddenCards.forEach(card => card.classList.add("hidden")); // Hide extra cards
-        seeLessBtn.classList.add("hidden"); // Hide "See Less" button
-        viewMoreBtn.classList.remove("hidden"); // Show "View More" button
+        hiddenCards.forEach(card => card.classList.add("hidden"));
+        seeLessBtn.classList.add("hidden");
+        viewMoreBtn.classList.remove("hidden");
 
-        // Smooth scroll back to the top of the service section
         setTimeout(() => smoothScrollTo(serviceSection, -50), 200);
     });
 });
@@ -38,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                const offset = 0; // Adjust this value to match your header height
+                const offset = 0;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY + offset;
 
                 window.scrollTo({
@@ -56,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const rightArrow = document.getElementById("rightArrow");
 
     let startIndex = 0;
-    const maxVisible = 3; // Number of visible cards at a time
+    const maxVisible = 3;
 
     function updateCards() {
         doctorCards.forEach((card, index) => {
@@ -81,5 +79,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    updateCards(); // Initialize card visibility
+    updateCards();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const signUpBtn = document.querySelector(".btn-24");
+    const popup = document.getElementById("signupPopup");
+    const closeBtn = popup.querySelector(".close-btn");
+
+    signUpBtn.addEventListener("click", function () {
+        popup.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+
+    popup.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    });
 });
