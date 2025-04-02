@@ -194,9 +194,11 @@ body {
 
 }
 
+/* Icons */
 .medicine_icons {
     display: flex;
     gap: 45px;
+    width: 13%;
     margin-right: 3rem;
 }
 
