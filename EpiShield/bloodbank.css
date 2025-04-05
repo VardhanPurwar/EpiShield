@@ -1,0 +1,386 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #12ac8e;
+    --primary-color-dark: #0d846c;
+    --primary-color-light: #e9f7f7;
+    --secondary-color: #fb923c;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --white: #ffffff;
+    --max-width: 1280px;
+    --border: .2rem solid var(--primary-color-dark);
+    --box-shadow: .5rem .5rem, 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+}
+
+* {
+    font-family: 'poppins';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: #fffeff;
+    color: white;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-bar {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background: #fae3e4;
+    padding: 8px 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar i {
+    color: #555;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.search-bar input {
+    background: #fae3e4;
+    border: none;
+    outline: none;
+    width: 500px;
+    font-size: 1.2rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    background-color: #fba1a3;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    justify-content: center;
+    max-width: 1400px;
+    margin: auto;
+    padding: 25px;
+}
+
+.bloodBank_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12rem;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0.4, 0.4, 0.4, 0.4);
+}
+
+.bloodBank_card img {
+    width: 35%;
+    height: 121%;
+    object-fit: cover;
+    margin-left: -1rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.bloodBank_details {
+    text-align: left;
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.bloodBank_details h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.bloodBank_details p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: .4rem
+}
+
+.bloodBank_details .open {
+    color: green;
+}
+
+.bloodBank_icons {
+    display: flex;
+    gap: 45px;
+    width: 13%;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.bloodBank_icons i {
+    font-size: 1.5rem;
+    color: #5289b9;
+    cursor: pointer;
+}
+
+.arrow {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.btn-96,
+.btn-96 *,
+.btn-96 :after,
+.btn-96 :before,
+.btn-96:after,
+.btn-96:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    height: 100px;
+    margin-top: -30px;
+    margin-bottom: -20px;
+}
+
+.btn-96 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color:#fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.btn-96:disabled {
+    cursor: default;
+}
+
+.btn-96:-moz-focusring {
+    outline: auto;
+}
+
+.btn-96 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-96 [hidden] {
+    display: none;
+}
+
+.btn-96 {
+    margin-left: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    -webkit-mask-image: none; 
+    padding: 2rem 5rem;
+    perspective: 800px;
+    position: relative;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+}
+
+.btn-96 span {
+    background: #5289b9;
+    color: #000;
+    display: grid;
+    inset: 0;
+    place-items: center;
+    position: absolute;
+    transform: rotateX(0deg);
+    transform-origin: top center;
+    transition: 0.2s;
+}
+
+.btn-96:hover span {
+    transform: rotateX(35deg);
+}
+
+.btn-96:after,
+.btn-96:before {
+    background: var(--text-light);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotateX(0deg);
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-96:after {
+    background:var(--secondary-color);
+    width: 0;
+}
+
+.btn-96:hover:after {
+    -webkit-animation: progress-bar 1.2s;
+    animation: progress-bar 1.2s;
+}
+
+@-webkit-keyframes progress-bar {
+    0% {
+        opacity: 1;
+        width: 0;
+    }
+    10% {
+        opacity: 1;
+        width: 15%;
+    }
+    25% {    
+        opacity: 1;
+        width: 25%;
+    }
+    40% {
+        opacity: 1;
+        width: 35%;
+    }
+    55% {
+        opacity: 1;
+        width: 75%;
+    }
+    60% {
+        opacity: 1;
+        width: 100%;
+    }
+    to {
+        opacity: 0;
+        width: 100%;
+    }
+}
+
+@keyframes progress-bar {
+    0% {
+        opacity: 1;
+        width: 0;
+    }
+    10% {
+        opacity: 1;
+        width: 15%;
+    }
+    25% {
+        opacity: 1;
+        width: 25%;
+    }
+    40% {
+        opacity: 1;
+        width: 35%;
+    }
+    55% {
+        opacity: 1;
+        width: 75%;
+    }
+    60% {
+        opacity: 1;
+        width: 100%;
+    }
+    to {
+        opacity: 0;
+        width: 100%;
+    }
+}
+
+
+.btn-3dclick {
+    appearance: button;
+    background: #5289b9;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #000 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 50px 5px 10px 20px;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btn-3dclick:focus {
+    text-decoration: none;
+}
+  
+.btn-3dclick:hover {
+    text-decoration: none;
+}
+  
+.btn-3dclick:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+  
+.btn-3dclick:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+  
+@media (min-width: 768px) {
+    .btn-3dclick {
+        padding: 12px 50px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
