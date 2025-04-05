@@ -94,10 +94,33 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.addEventListener("click", function () {
         popup.style.display = "none";
     });
+});
 
-    popup.addEventListener("click", function (event) {
-        if (event.target === popup) {
-            popup.style.display = "none";
+
+ddocument.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+    var jsonData = new URLSearchParams(formData).toString();
+
+    fetch('https://script.google.com/macros/s/AKfycbzjV8F-4DX64Te4w8SfGTJTvp0q0fu8DveAYC8qedjRyYW5c3_UXfadGXTpwVrjUkqt/exec', { // Replace with your Web App URL
+        method: "POST",
+        body: jsonData,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === "success") {
+            alert("Sign-up successful!");
+            document.getElementById("signupForm").reset();
+        } else {
+            alert("Error: " + data.error);
         }
-    });
+    })
+    .catch(error => console.error("Error:", error));
+
+    function doGet(e) {
+        return ContentService.createTextOutput("Hello, this is the GET request response.");
+      }
+      
 });
