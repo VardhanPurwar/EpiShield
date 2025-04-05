@@ -62,25 +62,16 @@ body {
     background-color: #f8f9fa;
     border: 2px solid #e0e0e0;
     border-radius: 25px;
-    padding: 10px 15px;
+    padding: 5px 10px;
     max-width: 700px;
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
+    margin-left: 8rem;
 }
 
 .search_bar i {
     color: black;
-}
-
-.search_bar {
-    margin-left: 8rem;
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .search_bar input {
