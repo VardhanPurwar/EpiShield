@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+body {
+    background: white;
+}
+
+.awareness-container {  
+    text-align: center;
+}
+
+.hero-header {
+    background-image: url('header-bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+  
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+  
+.hero-header .content {
+    position: relative;
+    z-index: 1;
+}
+  
+.hero-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
+  
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #D8A47F;
+    border-radius: 50px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin: 0 auto 25px;
+    max-width: 700px;
+}
+  
+.search-bar i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: black;
+}
+  
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.1rem;
+    background: transparent;
+    color: black;
+}
+  
+.search-bar input::placeholder {
+    color: black;
+    font-style: italic;
+}
+  
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+  
+.tags button {
+    background-color: #007b7f;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+  
+.tags button:hover {
+    background-color: #b58350;
+}
+
+.disease-main-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+} 
+
+.disease-main-wrapper.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.disease-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 40px 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+}
+
+.front-img {
+    max-width: 500px;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-right: 80px;
+    margin-top: 80px;
+    margin-left: 40px;
+    flex-shrink: 0;
+}
+
+.disease-content {
+    flex: 1;
+    min-width: 300px;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+    overflow-y: auto; 
+    max-height: 100%; 
+    padding-right: 10px;
+}
+
+.disease-content::-webkit-scrollbar {
+    width: 6px;
+}
+  
+.disease-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+  
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.disease-main-wrapper {
+    transition: opacity 0.5s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.disease-main-wrapper.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+}
+
+.comparison-table {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 1.1rem;
+}
