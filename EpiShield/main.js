@@ -97,30 +97,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-ddocument.getElementById("signupForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var formData = new FormData(this);
-    var jsonData = new URLSearchParams(formData).toString();
-
-    fetch('https://script.google.com/macros/s/AKfycbzjV8F-4DX64Te4w8SfGTJTvp0q0fu8DveAYC8qedjRyYW5c3_UXfadGXTpwVrjUkqt/exec', { // Replace with your Web App URL
-        method: "POST",
-        body: jsonData,
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === "success") {
-            alert("Sign-up successful!");
-            document.getElementById("signupForm").reset();
-        } else {
-            alert("Error: " + data.error);
-        }
-    })
-    .catch(error => console.error("Error:", error));
-
-    function doGet(e) {
-        return ContentService.createTextOutput("Hello, this is the GET request response.");
-      }
-      
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxEwdKW20RhYpDY5WSfjA_7x5KEDWZx_sAOEBqrTK5kI9d9SXUMgZe4IrDAPJld5OqGNQ/exec';
+    const form = document.forms['submit-to-google-sheet'];
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+  
+      document.getElementById("signupPopup").style.display = "none";
+  
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          form.reset();
+        })
+        .catch(error => {
+          alert("Error submitting form: " + error.message);
+        });
+    });
+  });
