@@ -1,6 +1,27 @@
 # EpiShield
 Welcome to Epishield, your trusted destination for reliable and comprehensive healthcare resources. We are dedicated to promoting wellness by providing valuable medical information, expert guidance, and essential healthcare services to support you on your health.
 
+##  Features
+
+- Doctor consultation directory with profile cards
+- Medicine search and health resources
+- Blood bank availability checker
+- Curated healthcare articles and wellness tips
+- Hosted on AWS S3 for scalability and reliability
+
+## 🛠 Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Hosting**: AWS S3 (Static Website Hosting)
+- **Design**: Responsive layout with modern UI effects
+- **Version Control**: Git & GitHub
+
+## 🧪 Run Locally
+
+1. Clone the repo:
+git clone https://github.com/VardhanPurwar/epishield.git
+2. Open index.html in your browser.
+
 ## Deployment & Hosting
 
 This project is hosted on **AWS S3** using a static website configuration. It leverages AWS Cloud infrastructure for scalability and performance.
@@ -10,10 +31,6 @@ This project is hosted on **AWS S3** using a static website configuration. It le
 - **Region**: ap-south-1 (Mumbai)
 
 AWS S3 is used to serve static content including HTML, CSS, JS files, and assets. The bucket is configured for public access with CloudFront CDN (optional).
-
-### Tech Stack
-- HTML, CSS, JavaScript
-- AWS S3 (Static Website Hosting)
 
 ## 🌐 Live Demo
 
