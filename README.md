@@ -14,3 +14,13 @@ AWS S3 is used to serve static content including HTML, CSS, JS files, and assets
 ### Tech Stack
 - HTML, CSS, JavaScript
 - AWS S3 (Static Website Hosting)
+
+## 🌐 Live Demo
+
+⚠️ The project was previously hosted on **AWS S3 (Static Website Hosting)**.  
+The live URL is currently **unavailable** because the AWS account is inactive.
+
+### Previous Deployment Details:
+- AWS Service: Amazon S3
+- Region: ap-south-1 (Mumbai)
+- Static Hosting: Enabled
