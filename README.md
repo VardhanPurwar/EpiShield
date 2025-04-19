@@ -8,6 +8,7 @@ Welcome to Epishield, your trusted destination for reliable and comprehensive he
 - Blood bank availability checker
 - Curated healthcare articles and wellness tips
 - Hosted on AWS S3 for scalability and reliability
+- User sign-up data stored in Google Sheets using Google Apps Script
 
 ## Tech Stack
 
@@ -15,12 +16,21 @@ Welcome to Epishield, your trusted destination for reliable and comprehensive he
 - **Hosting**: AWS S3 (Static Website Hosting)
 - **Design**: Responsive layout with modern UI effects
 - **Version Control**: Git & GitHub
+- **Backend**: Google Sheets + Apps Script (as lightweight database)
 
 ## Run Locally
 
 1. Clone the repo:
 git clone https://github.com/VardhanPurwar/epishield.git
 2. Open index.html in your browser.
+
+## Data Handling
+
+EpiShield uses Google Sheets as a backend database alternative to store user sign-up information.  
+Data is collected via a form and sent to the sheet using Google Apps Script, ensuring easy and efficient storage without traditional server infrastructure.
+
+- Google Sheet: https://docs.google.com/spreadsheets/d/1dLaXh_Gww6VDbn__Mw-9wRoR3lygeLyeISmTaVwEmzg/edit?gid=0#gid=0 (access restricted)
+- The sheet is secured and access-controlled for privacy.
 
 ## Deployment & Hosting
 
