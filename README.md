@@ -9,14 +9,14 @@ Welcome to Epishield, your trusted destination for reliable and comprehensive he
 - Curated healthcare articles and wellness tips
 - Hosted on AWS S3 for scalability and reliability
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Hosting**: AWS S3 (Static Website Hosting)
 - **Design**: Responsive layout with modern UI effects
 - **Version Control**: Git & GitHub
 
-## 🧪 Run Locally
+## Run Locally
 
 1. Clone the repo:
 git clone https://github.com/VardhanPurwar/epishield.git
@@ -32,7 +32,7 @@ This project is hosted on **AWS S3** using a static website configuration. It le
 
 AWS S3 is used to serve static content including HTML, CSS, JS files, and assets. The bucket is configured for public access with CloudFront CDN (optional).
 
-## 🌐 Live Demo
+## Live Demo
 
 ⚠️ The project was previously hosted on **AWS S3 (Static Website Hosting)**.  
 The live URL is currently **unavailable** because the AWS account is inactive.
