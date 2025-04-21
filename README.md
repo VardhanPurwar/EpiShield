@@ -46,7 +46,7 @@ AWS S3 is used to serve static content including HTML, CSS, JS files, and assets
 
 Check out a quick walkthrough of **EpiShield** in action:
 
-[![Watch the demo](https://www.youtube.com/watch?v=M3vlwB5yWZM)
+(https://www.youtube.com/watch?v=M3vlwB5yWZM)
 
 This demo covers:
 - AWS S3 deployment highlights
