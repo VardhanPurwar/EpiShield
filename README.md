@@ -42,6 +42,20 @@ This project is hosted on **AWS S3** using a static website configuration. It le
 
 AWS S3 is used to serve static content including HTML, CSS, JS files, and assets. The bucket is configured for public access with CloudFront CDN (optional).
 
+## 🎥 Project Demo
+
+Check out a quick walkthrough of **EpiShield** in action:
+
+[![Watch the demo](https://www.youtube.com/watch?v=M3vlwB5yWZM)
+
+This demo covers:
+- AWS S3 deployment highlights
+- Homepage layout and design
+- Sign-up flow and Google Sheets integration
+- Navigation through healthcare services
+- Awareness, Medicine and Blood Bank Sections
+- Doctor consultation directory with profile cards
+
 ## Live Demo
 
 ⚠️ The project was previously hosted on **AWS S3 (Static Website Hosting)**.  
